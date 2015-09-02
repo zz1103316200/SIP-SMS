@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SIP-SMS"
+  id="myeclipse.1400470085598"
+  context-root="/SIP-SMS"
+  j2ee-spec="5.0"
+  archive="SIP-SMS.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

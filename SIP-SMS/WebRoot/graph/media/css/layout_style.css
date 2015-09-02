@@ -1,0 +1,228 @@
+@CHARSET "UTF-8";
+BODY {
+	font-family: 'Open Sans';
+}
+H1 {
+	font-size: 18px;
+}
+H2 {
+	font-size: 16px;
+}
+		
+.btn {
+	background-color: #27A9E3;
+	background-image: none;
+	filter: none;
+	border: 0;
+	margin:3px;
+	padding: 7px 14px;
+	text-shadow: none;
+	font-family: \5FAE\8F6F\96C5\9ED1,"Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333333;
+	cursor: pointer;
+	outline: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+.btn.red {
+	color: white;
+	text-shadow: none;
+	background-color: #d84a38;
+}
+.btn.blue {
+	color: white;
+	text-shadow: none;
+	background-color: #4d90fe;
+}
+.btn.green {
+	color: white;
+	text-shadow: none;
+	background-color: #35aa47;
+}
+.btn.purple {
+	color: white;
+	text-shadow: none;
+	background-color:#6d1b81;
+}
+/*		
+#toolbarContainer {
+	margin: 0 0 10px;
+}
+*/
+table.mxWindow{
+	background-color:white;
+}
+.btn.blue {
+	color: white;
+	text-shadow: none;
+	background-color: #4d90fe;
+	filter: none;
+	background-image: none;
+	border: 0;
+	padding: 7px 14px;
+}
+button{
+	margin: 0;
+}
+.form-actions{
+	margin-left: -10px !important;
+	margin-right: -10px !important;
+	margin-bottom: 0px !important;
+	margin-top: 0px !important;
+	padding-left: 190px;
+	padding: 10px 0 10px 130px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #e5e5e5;
+}
+.control-group {
+	margin-bottom: 18px;
+}
+		
+.control-label {
+	float: left;
+	width: 80px;
+	padding-top: 5px;
+	text-align: right;
+	margin-top: 2px;
+	display: block;
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-family: \5FAE\8F6F\96C5\9ED1,'Open Sans' ;
+	font-weight: normal;
+	line-height: 20px;
+}
+.controls {
+	margin-left: 120px;
+}
+		
+.controls select{
+	width: auto;
+	margin-bottom: 0;
+}
+
+rect{
+	stroke: white!important;
+	fill-opacity: 0;
+	stroke-opacity: 0.0;
+	pointer-events: all;
+	stroke-width: 1px;
+}
+
+input[type="text"]{
+    -webkit-appearance: none !important;
+	color: #333333;
+	outline: 0;
+	height: 20px;
+	padding: 3px 3px !important;
+	line-height: 25px;
+	font-size: 10px;
+	font-weight: normal;
+	vertical-align: top;
+	background-color: #ffffff;
+	background-image: none !important;
+	filter: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	-moz-border-radius: 0px;
+	background: transparent;
+	border: 1px solid #e5e5e5;
+	display: inline-block;
+	margin-bottom: 0;
+	-webkit-transition: border linear .2s,box-shadow linear .2s;
+}
+
+.panel-header, .panel-body{
+    border-width: 0px;
+    
+}
+/*
+.breadcrumb{
+	background-color:#27A9E3;
+}
+*/
+.panel-header{
+    background-color: #FFFFFF !important;
+    background: #FFFFFF;
+    margin-top:30px;
+    /*color: #fff;*/
+}
+
+.layout-split-west {
+  border-width: 0px;
+}
+
+.panel-title{
+    padding: 20px 15px;
+	font-size: 30px;
+	letter-spacing: -1px;
+	display: block;
+	color: #666;
+	margin: 0px 0px 0px 0px;
+	font-family: \5FAE\8F6F\96C5\9ED1,'Open Sans', sans-serif;
+}
+
+.fa-home:before {
+	content: "\f015";
+}
+
+.page-content .page-breadcrumb.breadcrumb > li > i {
+	color: #666;
+}
+
+.page-content .page-breadcrumb.breadcrumb > li > a, .page-content .page-breadcrumb.breadcrumb > li > i, .page-content .page-breadcrumb.breadcrumb > li > span {
+	color: #333;
+	font-size: 14px;
+	text-shadow: none;
+}
+
+li [class^="fa-"], li [class*=" fa-"] {
+	display: inline-block;
+	width: 1.25em;
+	text-align: center;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+	display: inline-block;
+	margin-top: 1px;
+	font-size: 14px;
+}
+/*
+.fa {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+*/
+.fa-angle-right:before {
+	content: "\f105";
+}
+
+.tree{
+
+}
+
+.tree-node{
+    padding: 10px 15px;
+    /*border-top: 1px solid #5c5c5c !important;*/
+}
+
+.tree-title{
+    font-size: 14px;
+}
+
+.tree-folder-open{
+    background: url('images/tree_icons.png') no-repeat 0 0;
+}
+
+
+        

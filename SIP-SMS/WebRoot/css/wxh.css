@@ -1,0 +1,155 @@
+.wxh-spinner-size{
+	width: 80px;	
+	margin-top:10px;
+}
+#wxh-login{
+	display: inline !important; 
+	float: right !important;
+	margin-top:  
+}
+.thead-font tr th{
+	font-family:  'Microsoft YaHei';
+	font-size:16px; 
+	text-align:center;
+}
+.thead-font tr{
+	background-color: #D6DDE7  !important;
+	background-image: none !important;
+	
+}
+.TitleLabel{
+	font-family:  'Microsoft YaHei';
+	font-size:30px; 
+	margin-top: 30px;
+	margin-left: 30px;
+	color: white;
+}
+#AdminInfo{
+	position:relative;
+    top:-30px;	
+}
+.tbody-font tr td{
+	vertical-align:middle !important;
+	text-align:center;
+	font-family:  'Microsoft YaHei';
+	font-size:16px;
+}
+.ui-spinner-down{
+	background-color: #A90329;
+}
+.ui-spinner-up{
+	background-color: #3493B2;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after{
+	font-size: 12px;
+}
+.wxh-Pageup{
+	float: right;
+}
+aside{
+	background-image: url(../img/sider.png) !important; 
+}
+#header{
+	background-image: url(../img/header.png) !important; 
+
+}
+
+.header-label{
+	font-size:17px;
+	margin-top:0.3%;
+	margin-left: 0.5%;
+	font-family:  'Microsoft YaHei';
+	
+}
+.bootstrapWizard li{
+	width: 33% !important;
+}
+.col-sm-4{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 40% !important;
+}
+.tab1-title,.tab2-title,.tab3-title{
+	text-align: center;
+}
+.wxh-browse{
+	width:500px;
+	height:60px;
+	padding-left: 13px;
+	padding-right: 13px;
+	margin-left: auto !important;
+    margin-right: auto !important;
+}
+.wxh-broInput{
+	width: 445px !important;
+	height: 45px !important;
+}
+.wxh-broButton{
+	height: 30px !important;
+	margin-top: 4px !important;
+	margin-right: 40px !important;
+}
+.wxh-SearchInput{
+	width: 365px !important;
+	height: 45px !important;
+	
+}
+.wxh-SearchBorder{
+	width: 445px !important;
+	height: 45px !important;
+	margin-left: 34.2% !important;
+}
+.wxh-auto{
+	width:500px;
+	height:60px;
+	padding-left: 13px;
+	padding-right: 13px;
+    margin-left: 38% !important;
+}
+#AddNode{
+	float: right;
+}
+.wxh-SerSubmit{
+	width:6%;
+	float:right;
+	position:absolute;
+	z-index:20;
+	bottom:0.5%;
+	right:1%;
+}
+.wxh-SerSubmit:ACTIVE {
+	z-index:20;
+	position: absolute;
+	top:89%;
+	left:93%;
+}
+/*提示字体*/
+.ErrorInfo{
+	color: red !important;
+	width:300%;
+}
+/*进度条样式*/
+.pbar .ui-progressbar-value {
+	display:block !important
+}
+.pbar {
+	overflow: hidden
+}
+.percent {
+	position:relative;text-align: right;
+}
+.elapsed {
+	position:relative;text-align: right;
+}
+/* 策略头部 */
+.policyCss{
+	position: relative;
+	top:-5px;
+}
+/*描述淡出窗口*/
+#windowTip{
+	background-color:#FAF295;
+	border:1px black solid;
+	position:absolute;
+	z-index:20;
+}

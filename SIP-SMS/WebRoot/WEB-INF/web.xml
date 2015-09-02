@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <filter>
+  <filter-name>encodingfilter</filter-name>
+  <filter-class>filter.EncodingFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  <filter-name>encodingfilter</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>picture-upload</param-name> 
+    <param-value>
+          graph\\images\\icons48\\business\\
+     </param-value> 
+	</context-param>
+	
+	<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+        WEB-INF\\
+     </param-value> 
+	</context-param>
+ <context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload1</param-name> 
+    <param-value>
+        D:\\Workspaces\\.metadata\\.me_tcat\\webapps\\uploadIn\\
+     </param-value> 
+</context-param>
+
+<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload2</param-name> 
+    <param-value>
+        D:\\Workspaces\\.metadata\\.me_tcat\\webapps\\uploadOut\\
+     </param-value> 
+</context-param>
+ <servlet>
+  	<description>c3p0</description>
+  	<servlet-name>init</servlet-name>
+  	<servlet-class>com.flow.init.DataInit</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>SMSServlet</servlet-name>
+  <servlet-class>servlet.SMSServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>FileUpload</servlet-name>
+  <servlet-class>servlet.FileUpload</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>serviceDeployServlet</servlet-name>
+  <servlet-class>servlet.serviceDeployServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>serviceListServlet</servlet-name>
+  <servlet-class>servlet.serviceListServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>serviceStatusServlet</servlet-name>
+  <servlet-class>servlet.serviceStatusServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>serviceCopynumServlet</servlet-name>
+  <servlet-class>servlet.serviceCopynumServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>serviceDeleteServlet</servlet-name>
+  <servlet-class>servlet.serviceDeleteServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>strategyListServlet</servlet-name>
+  <servlet-class>servlet.strategyListServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>strategySelectServlet</servlet-name>
+  <servlet-class>servlet.strategySelectServlet</servlet-class>
+ </servlet>
+ <servlet>
+  <description>This is the description of my J2EE component</description>
+  <display-name>This is the display name of my J2EE component</display-name>
+  <servlet-name>strategyParaServlet</servlet-name>
+  <servlet-class>servlet.strategyParaServlet</servlet-class>
+ </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>hostListServlet</servlet-name>
+    <servlet-class>servlet.hostListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceCopyListServlet</servlet-name>
+    <servlet-class>servlet.serviceCopyListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userExistServlet</servlet-name>
+    <servlet-class>servlet.userExistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceExistServlet</servlet-name>
+    <servlet-class>servlet.serviceExistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>flowDeployServlet</servlet-name>
+    <servlet-class>servlet.flowDeployServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>generateFlowFileServlet</servlet-name>
+    <servlet-class>servlet.generateFlowFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceFlowDeployServlet</servlet-name>
+    <servlet-class>servlet.serviceFlowDeployServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>flowListServlet</servlet-name>
+    <servlet-class>servlet.flowListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>flowTrans</servlet-name>
+    <servlet-class>servlet.flowTrans</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>flowExecute</servlet-name>
+    <servlet-class>servlet.flowExecute</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>String2FileServlet</servlet-name>
+    <servlet-class>servlet.String2FileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceListPageup</servlet-name>
+    <servlet-class>servlet.serviceListPageup</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>strategyListPageup</servlet-name>
+    <servlet-class>servlet.strategyListPageup</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>businessFlowDeployServlet</servlet-name>
+    <servlet-class>servlet.businessFlowDeployServlet</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowSelectServlet</servlet-name>
+    <servlet-class>com.graph.servlet.ShowSelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SubmitNServlet</servlet-name>
+    <servlet-class>com.graph.servlet.SubmitNServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SubmitBusinessServlet</servlet-name>
+    <servlet-class>com.graph.servlet.SubmitBusinessServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowFlowListServlet</servlet-name>
+    <servlet-class>com.graph.servlet.ShowFlowListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SubmitFlowNameServlet</servlet-name>
+    <servlet-class>com.graph.servlet.SubmitFlowNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddProjectServlet</servlet-name>
+    <servlet-class>com.graph.servlet.AddProjectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getBusinessServlet</servlet-name>
+    <servlet-class>servlet.getBusinessServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SubmitBusinessDServlet</servlet-name>
+    <servlet-class>com.graph.servlet.SubmitBusinessDServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceflowDeployServlet2</servlet-name>
+    <servlet-class>servlet.serviceflowDeployServlet2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getStoreDetailServlet</servlet-name>
+    <servlet-class>servlet.getStoreDetailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>unZipStoreDetailServlet</servlet-name>
+    <servlet-class>servlet.unZipStoreDetailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>sendMessageInAjax</servlet-name>
+    <servlet-class>servlet.sendMessageInAjax</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getKuayuAjaxServlet</servlet-name>
+    <servlet-class>servlet.getKuayuAjaxServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>clearDownloadServlet</servlet-name>
+    <servlet-class>servlet.clearDownloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>downloadServlet</servlet-name>
+    <servlet-class>servlet.downloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getMessageInfoServlet</servlet-name>
+    <servlet-class>servlet.getMessageInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>feedbackServiceInfoServlet</servlet-name>
+    <servlet-class>servlet.feedbackServiceInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>filter</servlet-name>
+    <servlet-class>servlet.filter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>filterServiceServlet</servlet-name>
+    <servlet-class>servlet.filterServiceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceConcurrencyNumServlet</servlet-name>
+    <servlet-class>servlet.serviceConcurrencyNumServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>undeployedServiceListServlet</servlet-name>
+    <servlet-class>servlet.undeployedServiceListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeListServlet</servlet-name>
+    <servlet-class>servlet.nodeListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeChange</servlet-name>
+    <servlet-class>servlet.nodeChange</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeDelete</servlet-name>
+    <servlet-class>servlet.nodeDelete</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeAddServlet</servlet-name>
+    <servlet-class>servlet.nodeAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeFilterFirst</servlet-name>
+    <servlet-class>servlet.nodeFilterFirst</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeFilter</servlet-name>
+    <servlet-class>servlet.nodeFilter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>strategyFilterFirst</servlet-name>
+    <servlet-class>servlet.strategyFilterFirst</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>strategyFilter</servlet-name>
+    <servlet-class>servlet.strategyFilter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToPolgyServlet</servlet-name>
+    <servlet-class>servlet.ToPolgyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>sessiontest</servlet-name>
+    <servlet-class>servlet.sessiontest</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getSession</servlet-name>
+    <servlet-class>servlet.getSession</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeCpuMem</servlet-name>
+    <servlet-class>servlet.nodeCpuMem</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeHarddisk</servlet-name>
+    <servlet-class>servlet.nodeHarddisk</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeDetail</servlet-name>
+    <servlet-class>servlet.nodeDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceDetail</servlet-name>
+    <servlet-class>servlet.serviceDetail</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceCallInfo</servlet-name>
+    <servlet-class>servlet.serviceCallInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceResponseInfo</servlet-name>
+    <servlet-class>servlet.serviceResponseInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>inputSession</servlet-name>
+    <servlet-class>servlet.inputSession</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>serviceTopo</servlet-name>
+    <servlet-class>servlet.serviceTopo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeStatus</servlet-name>
+    <servlet-class>servlet.nodeStatus</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeExist</servlet-name>
+    <servlet-class>servlet.nodeExist</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getNumber</servlet-name>
+    <servlet-class>servlet.getNumber</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getFilterNumber</servlet-name>
+    <servlet-class>servlet.getFilterNumber</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getAvalibleNodeNum</servlet-name>
+    <servlet-class>servlet.getAvalibleNodeNum</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>wxhAllLineNum</servlet-name>
+    <servlet-class>servlet.wxhAllLineNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>wxhChooseList</servlet-name>
+    <servlet-class>servlet.wxhChooseList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>nodeAvaileble</servlet-name>
+    <servlet-class>servlet.nodeAvaileble</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>askNowstatus</servlet-name>
+    <servlet-class>servlet.askNowstatus</servlet-class>
+  </servlet>
+    <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UnifyAddressID</servlet-name>
+    <servlet-class>servlet.UnifyAddressID</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UnifyAddressXML</servlet-name>
+    <servlet-class>servlet.UnifyAddressXML</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet2</servlet-name>
+    <servlet-class>servlet.UploadServlet2</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYServiceType</servlet-name>
+    <servlet-class>servlet.DKYServiceType</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYServiceCopyList</servlet-name>
+    <servlet-class>servlet.DKYServiceCopyList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYServiceList</servlet-name>
+    <servlet-class>servlet.DKYServiceList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYServiceDelayStatistics</servlet-name>
+    <servlet-class>servlet.DKYServiceDelayStatistics</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYServiceCallStatistics</servlet-name>
+    <servlet-class>servlet.DKYServiceCallStatistics</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ServiceAdapater</servlet-name>
+    <servlet-class>servlet.ServiceAdapater</servlet-class>
+  </servlet>
+  
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>zz_getXmlStr</servlet-name>
+    <servlet-class>com.graph.servlet.zz_getXmlStr</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>zz_getXmlStrServlet</servlet-name>
+    <servlet-class>com.graph.servlet.zz_getXmlStrServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>test</servlet-name>
+    <servlet-class>com.flow.servlet.test</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ComponentListServlet</servlet-name>
+    <servlet-class>com.flow.servlet.ComponentListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getProtocolPropertiesServlet</servlet-name>
+    <servlet-class>com.flow.servlet.getProtocolPropertiesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>saveFlowServlet</servlet-name>
+    <servlet-class>com.flow.servlet.saveFlowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolOfNum</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolOfNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolList</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolSearch</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolSearch</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolSearchNum</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolSearchNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessOfNum</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessOfNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessSearchNum</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessSearchNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessList</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessSearch</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessSearch</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerOfNum</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerOfNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerSearchNum</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerSearchNum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerList</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerSearch</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerSearch</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessStatusChange</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessStatusChange</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolStatusChange</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolStatusChange</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerStatusChange</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerStatusChange</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessEdit</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessEdit</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolEdit</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolEdit</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerEdit</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerEdit</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>zz_flowListServlet</servlet-name>
+    <servlet-class>com.flow.servlet.zz_flowListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getInterOfSerServlet</servlet-name>
+    <servlet-class>com.flow.servlet.getInterOfSerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>showFlowServlet</servlet-name>
+    <servlet-class>com.flow.servlet.showFlowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>getProtocolListServlet</servlet-name>
+    <servlet-class>com.flow.servlet.getProtocolListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>checkCompServlet</servlet-name>
+    <servlet-class>com.flow.servlet.checkCompServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolAdd</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolAdd</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ServiceList</servlet-name>
+    <servlet-class>com.flow.servlet.ServiceList</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessAdd</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessAdd</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BusinessDestroy</servlet-name>
+    <servlet-class>com.flow.servlet.BusinessDestroy</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProtocolDestroy</servlet-name>
+    <servlet-class>com.flow.servlet.ProtocolDestroy</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InputTypeList</servlet-name>
+    <servlet-class>com.flow.servlet.InputTypeList</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OutputTypeList</servlet-name>
+    <servlet-class>com.flow.servlet.OutputTypeList</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerAdd</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerAdd</servlet-class>
+  </servlet>
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TransformerDestroy</servlet-name>
+    <servlet-class>com.flow.servlet.TransformerDestroy</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FilesUpload</servlet-name>
+    <servlet-class>com.flow.servlet.FilesUpload</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>deleteFlowServlet</servlet-name>
+    <servlet-class>com.flow.servlet.deleteFlowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>runFlowServlet</servlet-name>
+    <servlet-class>com.flow.servlet.runFlowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>stopFlowServlet</servlet-name>
+    <servlet-class>com.flow.servlet.stopFlowServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYServiceDeploy</servlet-name>
+    <servlet-class>servlet.DKYServiceDeploy</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYNodelist</servlet-name>
+    <servlet-class>servlet.DKYNodelist</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYNodeAdd</servlet-name>
+    <servlet-class>servlet.DKYNodeAdd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYNodeServiceInfo</servlet-name>
+    <servlet-class>servlet.DKYNodeServiceInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DKYSingleServiceStatus</servlet-name>
+    <servlet-class>servlet.DKYSingleServiceStatus</servlet-class>
+  </servlet>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <servlet-mapping>
+  <servlet-name>SMSServlet</servlet-name>
+  <url-pattern>/servlet/SMSServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>FileUpload</servlet-name>
+  <url-pattern>/fileupload</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>serviceDeployServlet</servlet-name>
+  <url-pattern>/servicedeployservlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>serviceListServlet</servlet-name>
+  <url-pattern>/servicelistservlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>serviceStatusServlet</servlet-name>
+  <url-pattern>/servicestatusservlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>serviceCopynumServlet</servlet-name>
+  <url-pattern>/servicecopynumservlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>serviceDeleteServlet</servlet-name>
+  <url-pattern>/servicedeleteservlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>strategyListServlet</servlet-name>
+  <url-pattern>/strategylistservlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>strategySelectServlet</servlet-name>
+  <url-pattern>/servlet/strategyselectservlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>strategyParaServlet</servlet-name>
+  <url-pattern>/servlet/strategyparaservlet</url-pattern>
+ </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hostListServlet</servlet-name>
+    <url-pattern>/hostlistservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceCopyListServlet</servlet-name>
+    <url-pattern>/servicecopylistservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>userExistServlet</servlet-name>
+    <url-pattern>/userexistservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceExistServlet</servlet-name>
+    <url-pattern>/serviceexistservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>flowDeployServlet</servlet-name>
+    <url-pattern>/flowdeployservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>generateFlowFileServlet</servlet-name>
+    <url-pattern>/generateflowfileservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceFlowDeployServlet</servlet-name>
+    <url-pattern>/serviceflowdeployservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>flowListServlet</servlet-name>
+    <url-pattern>/flowlistservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>flowTrans</servlet-name>
+    <url-pattern>/flowtrans</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>flowExecute</servlet-name>
+    <url-pattern>/flowexecute</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>String2FileServlet</servlet-name>
+    <url-pattern>/string2fileservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceListPageup</servlet-name>
+    <url-pattern>/servicelistpageup</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>strategyListPageup</servlet-name>
+    <url-pattern>/strategylistpageup</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>businessFlowDeployServlet</servlet-name>
+    <url-pattern>/businessflowdeployservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowSelectServlet</servlet-name>
+    <url-pattern>/servlet/ShowSelectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SubmitNServlet</servlet-name>
+    <url-pattern>/servlet/SubmitNServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SubmitBusinessServlet</servlet-name>
+    <url-pattern>/servlet/SubmitBusinessServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowFlowListServlet</servlet-name>
+    <url-pattern>/servlet/ShowFlowListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SubmitFlowNameServlet</servlet-name>
+    <url-pattern>/servlet/SubmitFlowNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddProjectServlet</servlet-name>
+    <url-pattern>/servlet/AddProjectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getBusinessServlet</servlet-name>
+    <url-pattern>/servlet/getBusinessServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SubmitBusinessDServlet</servlet-name>
+    <url-pattern>/servlet/SubmitBusinessDServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceflowDeployServlet2</servlet-name>
+    <url-pattern>/serviceflowdeployservlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getStoreDetailServlet</servlet-name>
+    <url-pattern>/servlet/getStoreDetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>unZipStoreDetailServlet</servlet-name>
+    <url-pattern>/servlet/unZipStoreDetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sendMessageInAjax</servlet-name>
+    <url-pattern>/servlet/sendMessageInAjax</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getKuayuAjaxServlet</servlet-name>
+    <url-pattern>/servlet/getKuayuAjaxServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>clearDownloadServlet</servlet-name>
+    <url-pattern>/servlet/clearDownloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>downloadServlet</servlet-name>
+    <url-pattern>/servlet/downloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getMessageInfoServlet</servlet-name>
+    <url-pattern>/servlet/getMessageInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>feedbackServiceInfoServlet</servlet-name>
+    <url-pattern>/servlet/feedbackServiceInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>filter</servlet-name>
+    <url-pattern>/filter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>filterServiceServlet</servlet-name>
+    <url-pattern>/filterserviceservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceConcurrencyNumServlet</servlet-name>
+    <url-pattern>/serviceconcurrencynumservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>undeployedServiceListServlet</servlet-name>
+    <url-pattern>/undeployedservicelistservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeListServlet</servlet-name>
+    <url-pattern>/nodelistservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeChange</servlet-name>
+    <url-pattern>/nodechange</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeDelete</servlet-name>
+    <url-pattern>/nodedelete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeAddServlet</servlet-name>
+    <url-pattern>/nodeaddservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeFilterFirst</servlet-name>
+    <url-pattern>/nodefilterfirst</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeFilter</servlet-name>
+    <url-pattern>/nodefilter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>strategyFilterFirst</servlet-name>
+    <url-pattern>/strategyfilterfirst</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>strategyFilter</servlet-name>
+    <url-pattern>/strategyfilter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToPolgyServlet</servlet-name>
+    <url-pattern>/topolgyservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sessiontest</servlet-name>
+    <url-pattern>/servlet/sessiontest</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getSession</servlet-name>
+    <url-pattern>/servlet/getSession</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeCpuMem</servlet-name>
+    <url-pattern>/nodecpumem</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeHarddisk</servlet-name>
+    <url-pattern>/nodeharddisk</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeDetail</servlet-name>
+    <url-pattern>/nodedetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceDetail</servlet-name>
+    <url-pattern>/servicedetail</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceCallInfo</servlet-name>
+    <url-pattern>/servicecallinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceResponseInfo</servlet-name>
+    <url-pattern>/serviceresponseinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>inputSession</servlet-name>
+    <url-pattern>/inputsession</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>serviceTopo</servlet-name>
+    <url-pattern>/servicetopo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeStatus</servlet-name>
+    <url-pattern>/nodestatus</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeExist</servlet-name>
+    <url-pattern>/nodeexist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getNumber</servlet-name>
+    <url-pattern>/getnumber</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getFilterNumber</servlet-name>
+    <url-pattern>/getfilternumber</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getAvalibleNodeNum</servlet-name>
+    <url-pattern>/getavaliblenodenum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>wxhAllLineNum</servlet-name>
+    <url-pattern>/wxhAllLineNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>wxhChooseList</servlet-name>
+    <url-pattern>/wxhChooseList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>nodeAvaileble</servlet-name>
+    <url-pattern>/nodeAvaileble</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>askNowstatus</servlet-name>
+    <url-pattern>/askNowstatus</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UnifyAddressID</servlet-name>
+    <url-pattern>/UnifyAddressID</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UnifyAddressXML</servlet-name>
+    <url-pattern>/UnifyAddressXML</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet2</servlet-name>
+    <url-pattern>/UploadServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYServiceType</servlet-name>
+    <url-pattern>/DKYServiceType</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYServiceCopyList</servlet-name>
+    <url-pattern>/DKYServiceCopyList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYServiceList</servlet-name>
+    <url-pattern>/DKYServiceList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYServiceDelayStatistics</servlet-name>
+    <url-pattern>/DKYServiceDelayStatistics</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYServiceCallStatistics</servlet-name>
+    <url-pattern>/DKYServiceCallStatistics</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServiceAdapater</servlet-name>
+    <url-pattern>/ServiceAdapater</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>zz_getXmlStr</servlet-name>
+    <url-pattern>/servlet/zz_getXmlStr</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zz_getXmlStrServlet</servlet-name>
+    <url-pattern>/servlet/zz_getXmlStrServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/servlet/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ComponentListServlet</servlet-name>
+    <url-pattern>/servlet/ComponentListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getProtocolPropertiesServlet</servlet-name>
+    <url-pattern>/servlet/getProtocolPropertiesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>saveFlowServlet</servlet-name>
+    <url-pattern>/servlet/saveFlowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolOfNum</servlet-name>
+    <url-pattern>/servlet/ProtocolOfNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolList</servlet-name>
+    <url-pattern>/servlet/ProtocolList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolSearch</servlet-name>
+    <url-pattern>/servlet/ProtocolSearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolSearchNum</servlet-name>
+    <url-pattern>/servlet/ProtocolSearchNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessOfNum</servlet-name>
+    <url-pattern>/servlet/BusinessOfNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessSearchNum</servlet-name>
+    <url-pattern>/servlet/BusinessSearchNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessList</servlet-name>
+    <url-pattern>/servlet/BusinessList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessSearch</servlet-name>
+    <url-pattern>/servlet/BusinessSearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerOfNum</servlet-name>
+    <url-pattern>/servlet/TransformerOfNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerSearchNum</servlet-name>
+    <url-pattern>/servlet/TransformerSearchNum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerList</servlet-name>
+    <url-pattern>/servlet/TransformerList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerSearch</servlet-name>
+    <url-pattern>/servlet/TransformerSearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessStatusChange</servlet-name>
+    <url-pattern>/servlet/BusinessStatusChange</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolStatusChange</servlet-name>
+    <url-pattern>/servlet/ProtocolStatusChange</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerStatusChange</servlet-name>
+    <url-pattern>/servlet/TransformerStatusChange</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessEdit</servlet-name>
+    <url-pattern>/servlet/BusinessEdit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolEdit</servlet-name>
+    <url-pattern>/servlet/ProtocolEdit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerEdit</servlet-name>
+    <url-pattern>/servlet/TransformerEdit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>zz_flowListServlet</servlet-name>
+    <url-pattern>/servlet/zz_flowListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getInterOfSerServlet</servlet-name>
+    <url-pattern>/servlet/getInterOfSerServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>showFlowServlet</servlet-name>
+    <url-pattern>/servlet/showFlowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>getProtocolListServlet</servlet-name>
+    <url-pattern>/servlet/getProtocolListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>checkCompServlet</servlet-name>
+    <url-pattern>/servlet/checkCompServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolAdd</servlet-name>
+    <url-pattern>/servlet/ProtocolAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServiceList</servlet-name>
+    <url-pattern>/servlet/ServiceList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessAdd</servlet-name>
+    <url-pattern>/servlet/BusinessAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BusinessDestroy</servlet-name>
+    <url-pattern>/servlet/BusinessDestroy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProtocolDestroy</servlet-name>
+    <url-pattern>/servlet/ProtocolDestroy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InputTypeList</servlet-name>
+    <url-pattern>/servlet/InputTypeList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OutputTypeList</servlet-name>
+    <url-pattern>/servlet/OutputTypeList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerAdd</servlet-name>
+    <url-pattern>/servlet/TransformerAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TransformerDestroy</servlet-name>
+    <url-pattern>/servlet/TransformerDestroy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FilesUpload</servlet-name>
+    <url-pattern>/servlet/FilesUpload</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>deleteFlowServlet</servlet-name>
+    <url-pattern>/servlet/deleteFlowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>runFlowServlet</servlet-name>
+    <url-pattern>/servlet/runFlowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>stopFlowServlet</servlet-name>
+    <url-pattern>/servlet/stopFlowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYServiceDeploy</servlet-name>
+    <url-pattern>/DKYServiceDeploy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYNodelist</servlet-name>
+    <url-pattern>/DKYNodelist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYNodeAdd</servlet-name>
+    <url-pattern>/DKYNodeAdd</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYNodeServiceInfo</servlet-name>
+    <url-pattern>/DKYNodeServiceInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DKYSingleServiceStatus</servlet-name>
+    <url-pattern>/DKYSingleServiceStatus</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+ <welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+ </welcome-file-list>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>
